@@ -88,7 +88,16 @@ const pdfDocument = document.getElementById("pdfDocument");
 setToday();
 
 document.querySelectorAll(".action-card").forEach(button => {
-  button.addEventListener("click", () => openDocument(button.dataset.type));
+  button.addEventListener("click", () => {
+    const externalUrl = button.dataset.url;
+
+    if (externalUrl) {
+      window.location.href = externalUrl;
+      return;
+    }
+
+    openDocument(button.dataset.type);
+  });
 });
 
 document.getElementById("backBtn").addEventListener("click", goHome);
