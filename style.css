@@ -119,12 +119,6 @@ button {
   box-shadow: 0 10px 24px rgba(31, 41, 55, 0.09);
 }
 
-.action-card:last-child {
-  grid-column: 1 / -1;
-  width: calc(50% - 9px);
-  justify-self: center;
-}
-
 .action-icon {
   width: 44px;
   height: 44px;
@@ -432,11 +426,6 @@ footer {
 @media (max-width: 650px) {
   .actions-grid {
     grid-template-columns: 1fr;
-  }
-
-  .action-card:last-child {
-    grid-column: auto;
-    width: 100%;
   }
 
   .form-row {
